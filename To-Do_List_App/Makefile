@@ -10,7 +10,7 @@ TARGET = to_do
 # Default build target
 all: $(TARGET)
 
-# Link object files into final executable
+# Link object files into an executable file
 $(TARGET): $(OBJ)
 	$(CC) $(OBJ) -o $(TARGET)
 
@@ -19,7 +19,7 @@ build/%.o: src/%.c
 	mkdir -p build
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Clean build artifacts
+#resetting project to clean state
 .PHONY: clean
 clean:
 	rm -rf build $(TARGET)
